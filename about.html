@@ -4,8 +4,34 @@
   <meta charset="UTF-8">
   <title>作った人</title>
   <style>
-    nav { background: #ddd; padding: 10px; }
-    nav a { margin: 0 10px; text-decoration: none; color: #000; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .content-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -13,9 +39,19 @@
     <a href="index.html">ゲーム紹介</a>
     <a href="about.html">作った人</a>
     <a href="contact.html">お問い合わせ</a>
+    <a href="news.html">ニュース</a>
   </nav>
 
-  <h1>作った人</h1>
-  <p>ここに制作者の情報やコメントを書きます。</p>
+  <div class="container">
+    <div class="content-box">
+      <h1>作った人</h1>
+      <p>ここに制作者の情報を書きます。</p>
+      <ul>
+        <li>名前（ハンドルネームでもOK）</li>
+        <li>担当：企画、デザイン、プログラム など</li>
+        <li>コメント：どういう気持ちで作ったか、など</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

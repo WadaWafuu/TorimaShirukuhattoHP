@@ -3,37 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>作った人</title>
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSS読み込み -->
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f0f8ff;
-      color: #333;
+    /* ===== メンバーカード専用スタイル ===== */
+    .team-info {
+      margin-bottom: 30px;
     }
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
+
+    .members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .content-box {
-      background: #fff;
-      padding: 20px;
+
+    .member-card {
+      background: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .member-card h3 {
+      margin-top: 0;
+      color: #0077b6;
+    }
+
+    .member-card p {
+      margin: 5px 0;
     }
   </style>
 </head>
+
 <body>
   <nav>
     <a href="index.html">ゲーム紹介</a>
@@ -45,12 +51,39 @@
   <div class="container">
     <div class="content-box">
       <h1>作った人</h1>
-      <p>ここに制作者の情報を書きます。</p>
-      <ul>
-        <li>名前（ハンドルネームでもOK）</li>
-        <li>担当：企画、デザイン、プログラム など</li>
-        <li>コメント：どういう気持ちで作ったか、など</li>
-      </ul>
+
+      <!-- チーム全体紹介 -->
+      <div class="team-info">
+        <h2>チームについて</h2>
+        <p>
+          このゲームは「チーム〇〇」によって制作されました。<br>
+          みんなでアイデアを出し合い、試行錯誤しながら完成を目指しています。
+        </p>
+      </div>
+
+      <!-- メンバー紹介（カード形式） -->
+      <div class="members">
+        <!-- メンバー1 -->
+        <div class="member-card">
+          <h3>アメリ</h3>
+          <p><strong>担当：</strong> 企画 / ディレクション</p>
+          <p><strong>コメント：</strong> 楽しいゲームになるように全力で考えました！</p>
+        </div>
+
+        <!-- メンバー2 -->
+        <div class="member-card">
+          <h3>umiushi</h3>
+          <p><strong>担当：</strong> プログラム</p>
+          <p><strong>コメント：</strong> バグと戦いながらコードを書きました。</p>
+        </div>
+
+        <!-- メンバー3 -->
+        <div class="member-card">
+          <h3>wawawa</h3>
+          <p><strong>担当：</strong> デザイン</p>
+          <p><strong>コメント：</strong> キャラクターや世界観をかわいく仕上げました！</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
